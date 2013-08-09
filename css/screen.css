@@ -1,0 +1,25 @@
+
+* {
+    background-color: #eee;
+}
+
+#wrapper {
+    width: 1024px;
+    margin: auto;
+}
+
+.content {
+    clear: both;
+    margin-top: 60px;
+}
+
+#navi li {
+    float: left;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.active {
+    font-weight: bold;
+}
+
