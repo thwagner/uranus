@@ -10,37 +10,44 @@
     <body>
         <?php      
             echo '<div id="wrapper">';
-                echo '<h1>Vehicles</h1>';
-                
-                echo '<div id="navi">
-                        <ul>
-                            <li class="navi_cell" id="nav_auto"><a href="#">Autos</a></li>
-                            <li class="navi_cell"  id="nav_lkw"><a href="#">LKW</a></li>
-                            <li class="navi_cell" id="nav_bike"><a href="#">Motorräder</a></li>
-                        </ul>
-                      </div>';
+                    echo '<h1 id="top_headline">Vehicles</h1>';
 
-                echo '<div class="content" id="content_auto">
-                    <h2>Autos</h2>
-                    <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, 
-                    arcu.<br />In enim justo, rhoncus ut, imperdiet a, venenatis vitae, 
-                    justo. Nullam dictum felis eu pede mollis pretium.</p></div>';
-                
-                echo '<div class="content" id="content_lkw">
-                    <h2>LKW</h2>
-                    <p>Phasellus viverra nulla ut metus varius laoreet. Quisque 
-                    rutrum. Aenean imperdiet. Etiam ultricies nisi vel <br /> augue. 
-                    Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam 
-                    rhoncus.</p></div>'; 
-                
-                echo '<div class="content" id="content_bike">
-                    <h2>Motorräder</h2>
-                    <p>Nam quam nunc, blandit vel, 
-                    luctus pulvinar, hendrerit id, lorem. 
-                    Maecenas nec odio et ante tincidunt tempus.<br />Donec vitae sapien ut libero 
-                    venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros 
-                    faucibus tincidunt.<br />Duis leo. Sed fringilla mauris sit amet nibh.</p></div>';
-                
+                    echo '<ul id="headlines"></ul>';
+
+                    echo '<h2>Autos</h2>
+                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, 
+                        arcu.<br />In enim justo, rhoncus ut, imperdiet a, venenatis vitae, 
+                        justo. Nullam dictum felis eu pede mollis pretium.</p>
+                        <p>Proin pretium, leo ac pellentesque mollis, felis nunc ultrices 
+                        eros, sed gravida augue augue mollis justo. Suspendisse eu ligula. 
+                        Nulla facilisi. Donec id justo. Praesent porttitor, nulla vitae 
+                        posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut 
+                        ipsum. Curabitur suscipit suscipit tellus. </p>
+                        ';
+
+                    echo '<h2>LKW</h2>
+                        <p>Phasellus viverra nulla ut metus varius laoreet. Quisque 
+                        rutrum. Aenean imperdiet. Etiam ultricies nisi vel <br /> augue. 
+                        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam 
+                        rhoncus.</p>'; 
+
+                    echo '<h2>Motorräder</h2>                       
+                        <p>Nam quam nunc, blandit vel, 
+                        luctus pulvinar, hendrerit id, lorem. 
+                        Maecenas nec odio et ante tincidunt tempus.<br />Donec vitae sapien ut libero 
+                        venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros 
+                        faucibus tincidunt.<br />Duis leo. Sed fringilla mauris sit amet nibh.</p>
+                        <p>In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare 
+                        lobortis. Curabitur a felis in nunc fringilla tristique. Morbi mattis 
+                        ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. 
+                        Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, 
+                        quam. Sed hendrerit. Morbi ac felis.
+                        </p>';
+
+                    echo '<h2>Sportwagen</h2>
+                        <p>Mauris turpis nunc, blandit et, volutpat molestie, porta ut, ligula. 
+                        Fusce pharetra convallis urna. Quisque ut nisi. </p>';
+                                   
                 echo '</div>';
         ?>
     </body>
