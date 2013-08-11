@@ -8,34 +8,16 @@
     margin: auto;
 }
 
-ul.slideshow {
-    border: 1px solid black;
-    margin: 1.5em 0;
-    height: 320px;
+#images {
+    width: 500px;
+    height: 400px;
     overflow: hidden;
-    /* 
-        Zum spaeteren Ausrichten! 
-    */
-    position: relative; 
-}
-
-ul.slideshow li {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.slideshowcontainer {
     position: relative;
+    list-style: none;
 }
 
-.slideshowcontainer a {
+.box_image {
     position: absolute;
-    right: 17px;
-    bottom: 10px;
+    top: 0px;
+    left: 0px;
 }
-
-.slideshowcontainer #backbutton {
-    right: 60px;
-}
-

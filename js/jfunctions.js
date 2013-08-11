@@ -1,37 +1,45 @@
 $(function() {
-    $('#headlines').prepend('<ul id="pic_ul"></ul>');
+    fading_duration = 2000;
+    image_count = $('.box_image').length;
+    j = 0;   
+    
+    $('#top_headline').append('<ul "headlines"></ul>'); 
+    $('.box_image').hide();
+    $('.box_image').eq(0).fadeIn(1000);
     
     $('#wrapper h2').each(function(i) {
         $(this).attr('id', 'headline_' + i);
-        $('#pic_ul').append('<li><a href="#' 
-                + 'headline_' + i + '">' 
-                + $(this).html() + '</a></li>');
+        $('#headlines').append('<li><a href="#headline_' + 
+                i + '">' + $(this).html() + 
+                '</a></li>');
     });
     
-    $('.slideshow li').hide();
-    $('.slideshow li').eq(0).show().addClass('active');
-    $('.slideshow').wrap('<div class="slideshowcontainer"></div>').
-            parent().after(
-                '<a href="#" id="back">Back</a>\n\
-                    &nbsp;<a href="#" id="forward">Forward</a>'
-                ); 
-                    
-    $('#forward').click(function() {
-        $('li.active').removeClass('active').fadeOut(2000).next().addClass('active').fadeIn(2000);
-        // return false ist eine Anweisung an den Browser, das Ansteuern eines
-        // Hyperlink abzubrechen.
+    $('#back').click(function() { 
+               
+        if (j < 0) {
+            j = image_count - 1;
+        } 
+        
+        $('.box_image').eq(j).fadeOut(fading_duration);
+        $('.box_image').eq(--j).fadeIn(fading_duration);
+        
         return false;
     })
     
-    $('#back').click(function() {
+    $('#forward').click(function() { 
+        var ct;
         
-        if ($('li.active').next().length == 0) {
-            $('li.active').removeClass('active').fadeOut(2000).
-                    parent().find('li').eq(0).addClass('active');
+        if (j == image_count - 1) {
+            ct = image_count - 1;
+            j = 0;
         } else {
-            $('li.active').removeClass('active').fadeOut(2000).prev().addClass('active').fadeIn(2000);       
+            ct = j;
+            j++;
         }
+   
+        $('.box_image').eq(ct).fadeOut(fading_duration);
+        $('.box_image').eq(j).fadeIn(fading_duration);
         
-        return false;       
+        return false;
     })
 }) 
