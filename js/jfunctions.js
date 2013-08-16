@@ -15,13 +15,14 @@ $(function() {
     });
     
     $('#back').click(function() { 
+        var ct = j--;
                
         if (j < 0) {
             j = image_count - 1;
         } 
         
-        $('.box_image').eq(j).fadeOut(fading_duration);
-        $('.box_image').eq(--j).fadeIn(fading_duration);
+        $('.box_image').eq(ct).fadeOut(fading_duration);
+        $('.box_image').eq(j).fadeIn(fading_duration);
         
         return false;
     })
