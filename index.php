@@ -15,22 +15,24 @@
                     echo '<ul id="headlines"></ul>';
 
                     echo '<h2 id="bilder">Bilder</h2>
-                        <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, 
+                        <p id="text_bilder">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, 
                         arcu.<br />In enim justo, rhoncus ut, imperdiet a, venenatis vitae, 
                         justo. Nullam dictum felis eu pede mollis pretium.</p>';
                     echo '<p id="image_box">';
                         echo '<ul id="images">'."\n";
-                            echo '<li><img src="./images/bird.jpg" alt="image" class="box_image"/>
+                            echo '<li><img src="./images/bird.jpg" alt="Naturbild einer Möwe" class="box_image"/>
                                 </li>'."\n";
-                            echo '<li><img src="./images/beach.jpg" alt="image" class="box_image"/>
+                            echo '<li><img src="./images/beach.jpg" alt="Ein einsamer Strand" class="box_image"/>
                                 </li>'."\n";
-                            echo '<li><img src="./images/garden.jpg" alt="image" class="box_image"/>
+                            echo '<li><img src="./images/garden.jpg" alt="Garten mit Schaukel" class="box_image"/>
                                 </li>'."\n";
-                            echo '<li><img src="./images/sea.jpg" alt="image" class="box_image"/>
+                            echo '<li><img src="./images/sea.jpg" alt="Steg am Meer" class="box_image"/>
                                 </li>'."\n";
                         echo '</ul>'."\n";
+               
                         echo '<a href="" id="back"><<<</a> | 
-                            <a href="" id="forward">>>></a>';
+                            <a href="" id="forward">>>></a>
+                            <span id="describer"></span>';
                     echo '</p>';
                     
                     echo '<h2>Beschreibung 1</h2>

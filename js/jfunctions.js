@@ -1,7 +1,8 @@
 $(function() {
     fading_duration = 2000;
     image_count = $('.box_image').length;
-    j = 0;   
+    j = 0; 
+    setDescriber(0);
     
     $('#top_headline').append('<ul "headlines"></ul>'); 
     $('.box_image').hide();
@@ -23,7 +24,8 @@ $(function() {
         
         $('.box_image').eq(ct).fadeOut(fading_duration);
         $('.box_image').eq(j).fadeIn(fading_duration);
-        
+        setDescriber(j);
+
         return false;
     })
     
@@ -40,7 +42,13 @@ $(function() {
    
         $('.box_image').eq(ct).fadeOut(fading_duration);
         $('.box_image').eq(j).fadeIn(fading_duration);
-        
+        setDescriber(j);
+   
         return false;
     })
 }) 
+
+function setDescriber(i) {
+    var pic_desc = $('.box_image').eq(i).attr('alt');
+    $('#describer').html(pic_desc);
+}
